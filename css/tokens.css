@@ -1,0 +1,84 @@
+/* =========================================================
+   Shaving360 — Design tokens (v5)
+   Palette: black · greys · white only. No hue accents.
+   ========================================================= */
+:root{
+  /* ---------- Ink (dark surfaces) ---------- */
+  --ink-1000:#050506;   /* stage / 3D / cinematic */
+  --ink-950:#09090B;    /* page */
+  --ink-900:#0F0F12;    /* raised section */
+  --ink-850:#151518;    /* card */
+  --ink-800:#1C1C20;    /* card hover / input */
+  --ink-700:#2B2B30;    /* strong border */
+  --ink-600:#3D3D44;
+
+  /* text on ink (≥4.5:1 on --ink-950) */
+  --fg-1:#F5F5F3;
+  --fg-2:#B8B8BE;
+  --fg-3:#8B8B93;
+  --fg-4:#5A5A62;       /* decorative only (never body text) */
+
+  /* ---------- Paper (light surfaces) ---------- */
+  --paper-50:#F2F2EF;
+  --paper-100:#E8E8E4;
+  --photo:#FFFFFF;      /* product photography background */
+  --white:#FFFFFF;
+
+  /* text on paper (≥4.5:1 on --paper-50) */
+  --fgd-1:#0F0F11;
+  --fgd-2:#4D4D55;
+  --fgd-3:#6A6A72;
+
+  /* ---------- Accent = white on dark, ink on light ---------- */
+  --accent:#FFFFFF;
+  --accent-d:#0F0F11;
+  --silver:#C9C9CE;
+  --glow:rgba(255,255,255,.22);
+
+  /* ---------- Lines ---------- */
+  --line:rgba(255,255,255,.08);
+  --line-2:rgba(255,255,255,.16);
+  --line-d:rgba(15,15,17,.10);
+  --line-d2:rgba(15,15,17,.18);
+
+  /* ---------- Type ---------- */
+  --f-display:"Cairo",system-ui,sans-serif;
+  --f-body:"Cairo",system-ui,sans-serif;
+  --t-d1:clamp(36px,4.2vw,68px);    --lh-d1:1.25;
+  --t-d2:clamp(28px,2.9vw,46px);    --lh-d2:1.3;
+  --t-h1:clamp(22px,1.8vw,30px);    --lh-h1:1.4;
+  --t-h2:clamp(18px,1.35vw,22px);   --lh-h2:1.45;
+  --t-title:17px;                   --lh-title:1.45;
+  --t-body-l:clamp(15px,1.1vw,17px); --lh-body:1.75;
+  --t-body:15px;
+  --t-cap:13px;                     --lh-cap:1.5;
+  --t-micro:12px;
+
+  /* ---------- Spacing (4-pt) ---------- */
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:24px; --s-6:32px; --s-7:48px; --s-8:64px; --s-9:96px;
+  --gutter:clamp(16px,2.2vw,32px);
+  --gap:12px;
+  --section:clamp(72px,7.5vw,112px);
+  --head-gap:clamp(28px,3vw,44px);   /* section header → content */
+
+  /* ---------- Radius ---------- */
+  --r-s:12px; --r-m:20px; --r-l:28px; --r-pill:999px;
+
+  /* ---------- Motion ---------- */
+  --e-out:cubic-bezier(.2,.8,.2,1);
+  --e-inout:cubic-bezier(.65,0,.35,1);
+
+  /* ---------- Layers ---------- */
+  --z-head:100; --z-menu:110; --z-cursor:150; --z-loader:200;
+}
+
+.t-d1{font:800 var(--t-d1)/var(--lh-d1) var(--f-display);letter-spacing:-.02em}
+.t-d2{font:700 var(--t-d2)/var(--lh-d2) var(--f-display);letter-spacing:-.015em}
+.t-h1{font:700 var(--t-h1)/var(--lh-h1) var(--f-display);letter-spacing:-.01em}
+.t-h2{font:600 var(--t-h2)/var(--lh-h2) var(--f-display)}
+.t-title{font:600 var(--t-title)/var(--lh-title) var(--f-display)}
+.t-body-l{font:400 var(--t-body-l)/var(--lh-body) var(--f-body)}
+.t-body{font:400 var(--t-body)/var(--lh-body) var(--f-body)}
+.t-cap{font:500 var(--t-cap)/var(--lh-cap) var(--f-display)}
+.t-micro{font:500 var(--t-micro)/1.4 var(--f-display);letter-spacing:.04em}
+.t-num{font-family:var(--f-display);font-feature-settings:"tnum";direction:ltr;unicode-bidi:isolate}
